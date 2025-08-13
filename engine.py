@@ -70,24 +70,3 @@ def generate(model, tokenizer, prompt, max_seq_len, device = "cuda"):
 
     return tokenizer.decode(input_ids[0].tolist())
 
-# device = 'cuda'
-# tok_path = "/home/work/llemr/sentencepiece/sentencepiece.model"
-
-# model = LLaMA(Transformer, 10000, 768, 12, 512, 16).to(device)
-# checkpoint = torch.load("/home/work/llemr/checkpoint/llama/best_checkpoint.pt", map_location=device)
-# model.load_state_dict(checkpoint['model_state_dict'])
-# tokenizer = Tokenizer(tok_path)
-
-# prompt = "아이엘사이언스의 자회사 아이트로닉스는 차량용 복합기능형 졸음 방지 단말기 특허를 출원했다고 4일 밝혔다. 신규 특허는 자동차 주행 중 운전자의 졸음운전을 방지하는 상태 검출 기술에 관한 것이다. 해당 단말기는 가시광선 및 근적외선 광원을 조사하는 광원 모듈 운전자의 얼굴 영상을 촬영하는 가시광선 및 근적외선 카메라 차량 실내의 이산화탄소 농도를 측정하는 이산화탄소 센서로 구성됐다. 단말기는 광원에 반응하는 운전자의 얼굴 촬영 영상을 기반으로 심박 데이터와 눈의 깜빡임 횟수 눈을 감은 시간 등을 측정한다. 여기에 차내 졸음을 유발하는 이산화탄소 농도까지 종합적으로 분석해 운전자의 졸음 상태를 판단하고 결과값에 따라 경보 신호를 송출하도록 설계됐다. 아이트로닉스는"
-# prompt = "아이엘사이언스의 자회사 아이트로닉스는 차량용 복합기능형 졸음 방지 단말기 특허를 출원했다고 4일 밝혔다. 신규 특허는 자동차 주행 중 운전자의 졸음운전을"
-# generate_text = generate(
-#     model,
-#     tokenizer,
-#     prompt,
-#     max_seq_len = 512
-# )
-# print(generate_text)
-
-# dataset = load_dataset("daekeun-ml/naver-news-summarization-ko")
-# text = "".join(dataset['test']['document'][0])
-# print(text)
