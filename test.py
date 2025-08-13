@@ -27,16 +27,16 @@ bertscore = evaluate.load('bertscore')
 
 
 device = 'cuda'
-tok_path = "/home/work/llemr/sentencepiece/sentencepiece.model"
+tok_path = ""
 
 model = LLaMA(Transformer, 10000, 768, 12, 512, 16).to(device)
-checkpoint = torch.load("/home/work/llemr/checkpoint/llama/best_checkpoint.pt", map_location=device)
+checkpoint = torch.load("", map_location=device)
 model.load_state_dict(checkpoint['model_state_dict'])
 tokenizer = Tokenizer(tok_path)
 
-prompt = '아이엘사이언스의 자회사 아이트로닉스는 차량용 복합기능형 졸음 방지 단말기 특허를 출원했다고 4일 밝혔다. 신규 특허는 자동차 주행 중 운전자의 졸음운전을 방지하는 상태 검출 기술에 관한 것이다.'
+prompt = ''
 
-dataset = load_dataset("daekeun-ml/naver-news-summarization-ko")
+dataset = load_dataset("")
 true_text = "".join(dataset['test']['document'][0:2])
 print(true_text)
 
