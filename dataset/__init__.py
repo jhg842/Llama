@@ -1,0 +1,1 @@
+from .nlp_data import charDataset, data_mode
