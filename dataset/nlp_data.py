@@ -40,30 +40,7 @@ def data_mode(mode):
     
     return text
 
-# text = data_mode('train')
-# # print(len(text))
-# test_data = charDataset(text, 256)
-# tok_path = "/home/work/llemr/sentencepiece/sentencepiece.model"
-# tokenizer = Tokenizer(tok_path)
-# test_data = tokenizer.encode(text, True, False)
-# print(len(test_data))
-# # test_data = charDataset(test_data, 10)
 
-# dataloader = DataLoader(test_data, batch_size=128, shuffle=False)
-# print(len(dataloader))
-
-
-# mode = 'train'
-# if mode == 'train':
-#     dataset = load_dataset("daekeun-ml/naver-news-summarization-ko")
-#     text = "".join(dataset['train']['document'])
-# elif mode == 'test':
-#     dataset = load_dataset("daekeun-ml/naver-news-summarization-ko")
-#     text = "".join(dataset['test']['document'])
-
-# dataset_train = charDataset(mode, text, block_size=10)
-
-# data_loader_train = DataLoader(dataset_train, batch_size=32, shuffle=True)
 
 
 
